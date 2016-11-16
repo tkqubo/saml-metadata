@@ -294,7 +294,7 @@ http://docs.oasis-open.org/security/saml/v2.0/saml-metadata-2.0-os.pdf">
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">IssuerPrincipal</span><span class="params">(<span name="commonName">commonName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="organization">organization: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="country">country: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="state">state: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">IssuerPrincipal</span><span class="params">(<span name="commonName">commonName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="organization">organization: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="country">country: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="state">state: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
 
@@ -351,9 +351,9 @@ https://docs.oracle.com/cd/E24191_01/common/tutorials/authz_cert_attributes.html
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="oasis.names.tc.saml._2_0.metadata.IssuerPrincipal#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(commonName:String,organization:String,country:String,state:String):oasis.names.tc.saml._2_0.metadata.IssuerPrincipal"></a><a id="&lt;init&gt;:IssuerPrincipal"></a>
+      <a id="&lt;init&gt;(commonName:String,organization:String,country:String,state:Option[String]):oasis.names.tc.saml._2_0.metadata.IssuerPrincipal"></a><a id="&lt;init&gt;:IssuerPrincipal"></a>
       <span class="permalink">
-      <a href="../../../../../../oasis/names/tc/saml/_2_0/metadata/IssuerPrincipal.html#&lt;init&gt;(commonName:String,organization:String,country:String,state:String):oasis.names.tc.saml._2_0.metadata.IssuerPrincipal" title="Permalink">
+      <a href="../../../../../../oasis/names/tc/saml/_2_0/metadata/IssuerPrincipal.html#&lt;init&gt;(commonName:String,organization:String,country:String,state:Option[String]):oasis.names.tc.saml._2_0.metadata.IssuerPrincipal" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -362,7 +362,7 @@ https://docs.oracle.com/cd/E24191_01/common/tutorials/authz_cert_attributes.html
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">IssuerPrincipal</span><span class="params">(<span name="commonName">commonName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="organization">organization: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="country">country: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="state">state: <span class="extype" name="scala.Predef.String">String</span></span>)</span>
+        <span class="name">IssuerPrincipal</span><span class="params">(<span name="commonName">commonName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="organization">organization: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="country">country: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="state">state: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span>
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">commonName</dt><dd class="cmt"><p>Attribute represented by <code>CN</code></p></dd><dt class="param">organization</dt><dd class="cmt"><p>Attribute represented by <code>O</code></p></dd><dt class="param">country</dt><dd class="cmt"><p>Attribute represented by <code>C</code></p></dd><dt class="param">state</dt><dd class="cmt"><p>Attribute represented by <code>ST</code></p></dd></dl></div>
@@ -629,9 +629,9 @@ https://docs.oracle.com/cd/E24191_01/common/tutorials/authz_cert_attributes.html
       
       
     </li><li name="oasis.names.tc.saml._2_0.metadata.IssuerPrincipal#state" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="state:String"></a>
+      <a id="state:Option[String]"></a>
       <span class="permalink">
-      <a href="../../../../../../oasis/names/tc/saml/_2_0/metadata/IssuerPrincipal.html#state:String" title="Permalink">
+      <a href="../../../../../../oasis/names/tc/saml/_2_0/metadata/IssuerPrincipal.html#state:Option[String]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -640,7 +640,7 @@ https://docs.oracle.com/cd/E24191_01/common/tutorials/authz_cert_attributes.html
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">state</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+        <span class="name">state</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
       
       
