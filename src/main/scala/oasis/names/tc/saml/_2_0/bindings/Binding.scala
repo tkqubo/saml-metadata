@@ -3,12 +3,11 @@ package oasis.names.tc.saml._2_0.bindings
 import java.net.URI
 
 sealed trait Binding {
-  def name: String
   def uri: URI
 }
 
 object Binding {
-  class BindingBase(override final val name: String) extends Binding {
+  class BindingBase(val name: String) extends Binding {
     override final val uri: URI = new URI(s"urn:oasis:names:tc:SAML:2.0:bindings:$name")
   }
 
@@ -19,9 +18,10 @@ object Binding {
   case object HttpArtifact extends BindingBase("HTTP-Artifact")
   case object UrlEncodingDeflate extends BindingBase("URL-Encoding:DEFLATE")
   case object Uri extends BindingBase("URI")
+  case class Other(uri: URI) extends Binding
 
   def all: Set[Binding] = Set(Soap, Paos, HttpRedirect, HttpPost, HttpArtifact, UrlEncodingDeflate, Uri)
 
-  def apply(uri: String): Binding = all.find(_.uri.toString == uri).getOrElse(throw new NoSuchElementException(s"$uri does not exist for binding"))
+  def apply(uri: String): Binding = all.find(_.uri.toString == uri) getOrElse Other(new URI(uri))
 }
 

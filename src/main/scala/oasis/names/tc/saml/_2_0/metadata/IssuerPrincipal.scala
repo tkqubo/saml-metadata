@@ -14,7 +14,7 @@ case class IssuerPrincipal(
   commonName: String,
   organization: String,
   country: String,
-  state: String
+  state: Option[String]
 )
 
 object IssuerPrincipal {
@@ -30,7 +30,7 @@ object IssuerPrincipal {
       commonName = map("CN"),
       organization = map("O"),
       country = map("C"),
-      state = map("ST")
+      state = map.get("ST")
     )
   }
 }

@@ -16,7 +16,7 @@ class IssuerPrincipalTest extends WordSpec with Matchers with DiagrammedAssertio
         val certificate = X509Certificate.loadCertificate(ExampleXml.certificate.value1)
         val actual = IssuerPrincipal(certificate)
         import ExampleXml.certificate.issuer._
-        actual should === (IssuerPrincipal(commonName, company, country, state))
+        actual should === (IssuerPrincipal(commonName, company, country, Some(state)))
       }
     }
   }
