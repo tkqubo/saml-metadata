@@ -11,9 +11,9 @@ import javax.security.auth.x500.X500Principal
   * @param state Attribute represented by `ST`
   */
 case class IssuerPrincipal(
-  commonName: String,
-  organization: String,
-  country: String,
+  commonName: Option[String],
+  organization: Option[String],
+  country: Option[String],
   state: Option[String]
 )
 
@@ -27,9 +27,9 @@ object IssuerPrincipal {
         (array(0).toUpperCase, array(1))
       }(collection.breakOut)
     IssuerPrincipal(
-      commonName = map("CN"),
-      organization = map("O"),
-      country = map("C"),
+      commonName = map.get("CN"),
+      organization = map.get("O"),
+      country = map.get("C"),
       state = map.get("ST")
     )
   }
