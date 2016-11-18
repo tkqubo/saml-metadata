@@ -242,9 +242,11 @@ http://docs.oasis-open.org/security/saml/v2.0/saml-metadata-2.0-os.pdf">
                       </li><li class="current-entities indented6">
                         <a class="object" href="KeyInfo$.html" title=""></a>
                         <a class="class" href="KeyInfo.html" title="Enables the recipient(s) to obtain the key needed to validate the signature
-https://www.w3.org/TR/xmldsig-core/#sec-KeyInfo"></a>
+https://www.w3.org/TR/xmldsig-core/#sec-KeyInfo
+"></a>
                         <a href="KeyInfo.html" title="Enables the recipient(s) to obtain the key needed to validate the signature
-https://www.w3.org/TR/xmldsig-core/#sec-KeyInfo">
+https://www.w3.org/TR/xmldsig-core/#sec-KeyInfo
+">
                           KeyInfo
                         </a>
                       </li><li class="current-entities indented6">
@@ -258,6 +260,12 @@ https://www.w3.org/TR/xmldsig-core/#sec-KeyInfo">
                         <a class="trait" href="RoleDescriptor.html" title=""></a>
                         <a href="RoleDescriptor.html" title="">
                           RoleDescriptor
+                        </a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="Signature$.html" title=""></a>
+                        <a class="class" href="Signature.html" title=""></a>
+                        <a href="Signature.html" title="">
+                          Signature
                         </a>
                       </li><li class="current-entities indented6">
                         <a class="object" href="SingleSignOnService$.html" title=""></a>
@@ -381,7 +389,7 @@ http://docs.oasis-open.org/security/saml/v2.0/saml-metadata-2.0-os.pdf">
         <a title="See 2.3.1 Element &lt;EntitiesDescriptor&gt; in
 http://docs.oasis-open.org/security/saml/v2.0/saml-metadata-2.0-os.pdf" href="EntityDescriptor.html">
               <span class="name">EntityDescriptor</span>
-            </a><span class="params">(<span name="entityId">entityId: <span class="extype" name="java.net.URI">URI</span></span>, <span name="id">id: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">None</span></span>, <span name="idpSsoDescriptors">idpSsoDescriptors: <span class="extype" name="scala.Seq">Seq</span>[<a href="IDPSSODescriptor.html" class="extype" name="oasis.names.tc.saml._2_0.metadata.IDPSSODescriptor">IDPSSODescriptor</a>] = <span class="symbol">Nil</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+            </a><span class="params">(<span name="entityId">entityId: <span class="extype" name="java.net.URI">URI</span></span>, <span name="id">id: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">None</span></span>, <span name="signature">signature: <span class="extype" name="scala.Option">Option</span>[<a href="Signature.html" class="extype" name="oasis.names.tc.saml._2_0.metadata.Signature">Signature</a>] = <span class="symbol">None</span></span>, <span name="idpSsoDescriptors">idpSsoDescriptors: <span class="extype" name="scala.Seq">Seq</span>[<a href="IDPSSODescriptor.html" class="extype" name="oasis.names.tc.saml._2_0.metadata.IDPSSODescriptor">IDPSSODescriptor</a>] = <span class="symbol">Nil</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       
       <p class="shortcomment cmt">See <code>2.3.1 Element &lt;EntitiesDescriptor&gt;</code> in
@@ -455,7 +463,7 @@ http://docs.oasis-open.org/security/saml/v2.0/saml-metadata-2.0-os.pdf</p>
       </a>
     </span>
       <span class="modifier_kind">
-        <span class="modifier">sealed </span>
+        <span class="modifier"></span>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
@@ -478,13 +486,15 @@ http://docs.oasis-open.org/security/saml/v2.0/saml-metadata-2.0-os.pdf</p>
       </span>
       <span class="symbol">
         <a title="Enables the recipient(s) to obtain the key needed to validate the signature
-https://www.w3.org/TR/xmldsig-core/#sec-KeyInfo" href="KeyInfo.html">
+https://www.w3.org/TR/xmldsig-core/#sec-KeyInfo
+" href="KeyInfo.html">
               <span class="name">KeyInfo</span>
             </a><span class="params">(<span name="values">values: <span class="extype" name="scala.Seq">Seq</span>[<a href="KeyInfoValue.html" class="extype" name="oasis.names.tc.saml._2_0.metadata.KeyInfoValue">KeyInfoValue</a>]</span>)</span><span class="result"> extends <a href="KeyDescriptorValue.html" class="extype" name="oasis.names.tc.saml._2_0.metadata.KeyDescriptorValue">KeyDescriptorValue</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       
       <p class="shortcomment cmt">Enables the recipient(s) to obtain the key needed to validate the signature
-https://www.w3.org/TR/xmldsig-core/#sec-KeyInfo</p>
+https://www.w3.org/TR/xmldsig-core/#sec-KeyInfo
+</p>
     </li><li name="oasis.names.tc.saml._2_0.metadata.KeyInfoValue" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="KeyInfoValueextendsAnyRef"></a><a id="KeyInfoValue:KeyInfoValue"></a>
       <span class="permalink">
@@ -518,6 +528,24 @@ https://www.w3.org/TR/xmldsig-core/#sec-KeyInfo</p>
         <a title="" href="RoleDescriptor.html">
               <span class="name">RoleDescriptor</span>
             </a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
+    </li><li name="oasis.names.tc.saml._2_0.metadata.Signature" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SignatureextendsProductwithSerializable"></a><a id="Signature:Signature"></a>
+      <span class="permalink">
+      <a href="../../../../../../oasis/names/tc/saml/_2_0/metadata/index.html#SignatureextendsProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="Signature.html">
+              <span class="name">Signature</span>
+            </a><span class="params">(<span name="keyInfos">keyInfos: <span class="extype" name="scala.Seq">Seq</span>[<a href="KeyInfo.html" class="extype" name="oasis.names.tc.saml._2_0.metadata.KeyInfo">KeyInfo</a>]</span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       
       
@@ -727,6 +755,24 @@ https://www.w3.org/TR/xmldsig-core/#sec-X509Data</p></div></div>
         <a title="" href="KeyInfoValue$.html">
               <span class="name">KeyInfoValue</span>
             </a>
+      </span>
+      
+      
+    </li><li name="oasis.names.tc.saml._2_0.metadata.Signature" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Signature"></a><a id="Signature:Signature"></a>
+      <span class="permalink">
+      <a href="../../../../../../oasis/names/tc/saml/_2_0/metadata/index.html#Signature" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="Signature$.html">
+              <span class="name">Signature</span>
+            </a><span class="result"> extends <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       
       

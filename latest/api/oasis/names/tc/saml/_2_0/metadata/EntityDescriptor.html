@@ -226,9 +226,11 @@ http://docs.oasis-open.org/security/saml/v2.0/saml-metadata-2.0-os.pdf">
                       </li><li class="current-entities indented6">
                         <a class="object" href="KeyInfo$.html" title=""></a>
                         <a class="class" href="KeyInfo.html" title="Enables the recipient(s) to obtain the key needed to validate the signature
-https://www.w3.org/TR/xmldsig-core/#sec-KeyInfo"></a>
+https://www.w3.org/TR/xmldsig-core/#sec-KeyInfo
+"></a>
                         <a href="KeyInfo.html" title="Enables the recipient(s) to obtain the key needed to validate the signature
-https://www.w3.org/TR/xmldsig-core/#sec-KeyInfo">
+https://www.w3.org/TR/xmldsig-core/#sec-KeyInfo
+">
                           KeyInfo
                         </a>
                       </li><li class="current-entities indented6">
@@ -242,6 +244,12 @@ https://www.w3.org/TR/xmldsig-core/#sec-KeyInfo">
                         <a class="trait" href="RoleDescriptor.html" title=""></a>
                         <a href="RoleDescriptor.html" title="">
                           RoleDescriptor
+                        </a>
+                      </li><li class="current-entities indented6">
+                        <a class="object" href="Signature$.html" title=""></a>
+                        <a class="class" href="Signature.html" title=""></a>
+                        <a href="Signature.html" title="">
+                          Signature
                         </a>
                       </li><li class="current-entities indented6">
                         <a class="object" href="SingleSignOnService$.html" title=""></a>
@@ -294,7 +302,7 @@ http://docs.oasis-open.org/security/saml/v2.0/saml-metadata-2.0-os.pdf">
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">EntityDescriptor</span><span class="params">(<span name="entityId">entityId: <span class="extype" name="java.net.URI">URI</span></span>, <span name="id">id: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">None</span></span>, <span name="idpSsoDescriptors">idpSsoDescriptors: <span class="extype" name="scala.Seq">Seq</span>[<a href="IDPSSODescriptor.html" class="extype" name="oasis.names.tc.saml._2_0.metadata.IDPSSODescriptor">IDPSSODescriptor</a>] = <span class="symbol">Nil</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">EntityDescriptor</span><span class="params">(<span name="entityId">entityId: <span class="extype" name="java.net.URI">URI</span></span>, <span name="id">id: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">None</span></span>, <span name="signature">signature: <span class="extype" name="scala.Option">Option</span>[<a href="Signature.html" class="extype" name="oasis.names.tc.saml._2_0.metadata.Signature">Signature</a>] = <span class="symbol">None</span></span>, <span name="idpSsoDescriptors">idpSsoDescriptors: <span class="extype" name="scala.Seq">Seq</span>[<a href="IDPSSODescriptor.html" class="extype" name="oasis.names.tc.saml._2_0.metadata.IDPSSODescriptor">IDPSSODescriptor</a>] = <span class="symbol">Nil</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
 
@@ -351,9 +359,9 @@ http://docs.oasis-open.org/security/saml/v2.0/saml-metadata-2.0-os.pdf</p></div>
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="oasis.names.tc.saml._2_0.metadata.EntityDescriptor#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(entityId:java.net.URI,id:Option[String],idpSsoDescriptors:Seq[oasis.names.tc.saml._2_0.metadata.IDPSSODescriptor]):oasis.names.tc.saml._2_0.metadata.EntityDescriptor"></a><a id="&lt;init&gt;:EntityDescriptor"></a>
+      <a id="&lt;init&gt;(entityId:java.net.URI,id:Option[String],signature:Option[oasis.names.tc.saml._2_0.metadata.Signature],idpSsoDescriptors:Seq[oasis.names.tc.saml._2_0.metadata.IDPSSODescriptor]):oasis.names.tc.saml._2_0.metadata.EntityDescriptor"></a><a id="&lt;init&gt;:EntityDescriptor"></a>
       <span class="permalink">
-      <a href="../../../../../../oasis/names/tc/saml/_2_0/metadata/EntityDescriptor.html#&lt;init&gt;(entityId:java.net.URI,id:Option[String],idpSsoDescriptors:Seq[oasis.names.tc.saml._2_0.metadata.IDPSSODescriptor]):oasis.names.tc.saml._2_0.metadata.EntityDescriptor" title="Permalink">
+      <a href="../../../../../../oasis/names/tc/saml/_2_0/metadata/EntityDescriptor.html#&lt;init&gt;(entityId:java.net.URI,id:Option[String],signature:Option[oasis.names.tc.saml._2_0.metadata.Signature],idpSsoDescriptors:Seq[oasis.names.tc.saml._2_0.metadata.IDPSSODescriptor]):oasis.names.tc.saml._2_0.metadata.EntityDescriptor" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -362,7 +370,7 @@ http://docs.oasis-open.org/security/saml/v2.0/saml-metadata-2.0-os.pdf</p></div>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">EntityDescriptor</span><span class="params">(<span name="entityId">entityId: <span class="extype" name="java.net.URI">URI</span></span>, <span name="id">id: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">None</span></span>, <span name="idpSsoDescriptors">idpSsoDescriptors: <span class="extype" name="scala.Seq">Seq</span>[<a href="IDPSSODescriptor.html" class="extype" name="oasis.names.tc.saml._2_0.metadata.IDPSSODescriptor">IDPSSODescriptor</a>] = <span class="symbol">Nil</span></span>)</span>
+        <span class="name">EntityDescriptor</span><span class="params">(<span name="entityId">entityId: <span class="extype" name="java.net.URI">URI</span></span>, <span name="id">id: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">None</span></span>, <span name="signature">signature: <span class="extype" name="scala.Option">Option</span>[<a href="Signature.html" class="extype" name="oasis.names.tc.saml._2_0.metadata.Signature">Signature</a>] = <span class="symbol">None</span></span>, <span name="idpSsoDescriptors">idpSsoDescriptors: <span class="extype" name="scala.Seq">Seq</span>[<a href="IDPSSODescriptor.html" class="extype" name="oasis.names.tc.saml._2_0.metadata.IDPSSODescriptor">IDPSSODescriptor</a>] = <span class="symbol">Nil</span></span>)</span>
       </span>
       
       
@@ -628,6 +636,22 @@ http://docs.oasis-open.org/security/saml/v2.0/saml-metadata-2.0-os.pdf</p></div>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="oasis.names.tc.saml._2_0.metadata.EntityDescriptor#signature" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="signature:Option[oasis.names.tc.saml._2_0.metadata.Signature]"></a><a id="signature:Option[Signature]"></a>
+      <span class="permalink">
+      <a href="../../../../../../oasis/names/tc/saml/_2_0/metadata/EntityDescriptor.html#signature:Option[oasis.names.tc.saml._2_0.metadata.Signature]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">signature</span><span class="result">: <span class="extype" name="scala.Option">Option</span>[<a href="Signature.html" class="extype" name="oasis.names.tc.saml._2_0.metadata.Signature">Signature</a>]</span>
+      </span>
+      
+      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
