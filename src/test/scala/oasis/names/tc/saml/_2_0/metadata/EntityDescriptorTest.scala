@@ -23,6 +23,8 @@ class EntityDescriptorTest extends WordSpec with Matchers with DiagrammedAsserti
         actual should not be None
         actual.get.id should === (ExampleXml.id)
         actual.get.entityId should === (ExampleXml.entityId)
+        actual.get.signature should not be None
+        actual.get.signature.get.keyInfos should have size 1
         actual.get.idpSsoDescriptors should have size 1
       }
     }

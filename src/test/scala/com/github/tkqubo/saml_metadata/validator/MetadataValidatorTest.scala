@@ -14,6 +14,7 @@ class MetadataValidatorTest extends WordSpec with Matchers with DiagrammedAssert
   classOf[MetadataValidator].getCanonicalName should {
     "validate" should {
       "return true" in {
+        pending
         val file: File = new File(getClass.getResource("/example.xml").toURI)
         MetadataValidator.validate(file) should === (true)
       }
